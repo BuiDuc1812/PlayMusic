@@ -85,7 +85,7 @@ body{
 }
 .progress-area .progress-bar{
     height: inherit;
-    width: 50%;
+    width: 0%;
     border-radius:  inherit;
     background: linear-gradient(90deg, var(--pink), var(--violet)100%);
     position: relative;
@@ -163,7 +163,7 @@ body{
 .music-list{
     position: absolute;
     left: 0;
-    bottom: -55%;
+    bottom: -50%;
     opacity: 0;
     pointer-events: none;
     width: 100%;
@@ -171,12 +171,12 @@ body{
     background:  var(--white);
     border-radius: 15px;
     box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
-    transition: all 0.2s ease-out
+    transition: 0.2s ease;
 }
-/* show class */
-.music-list .show{
+
+.music-list.show{
     bottom: 0;
-    opacity: 1;
+    opacity: 1; 
     pointer-events: auto;
 }
 .music-list .header .row{
@@ -222,4 +222,9 @@ ul li .row p{
 }
 ul li .audio-duration{
     font-size: 16px;
+}
+
+ul li.playing{
+    color: var(--violet);
+    pointer-events: none;
 }
